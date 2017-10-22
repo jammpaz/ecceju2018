@@ -7,4 +7,4 @@ docker run --rm \
            -w /website \
            -v gems_data:/usr/local/bundle/ \
            $REPO_TAG \
-           bundle install
+           $1
