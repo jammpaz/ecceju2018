@@ -1,3 +1,11 @@
 FROM ruby:2.4.2-jessie
 
+#Dependencies
 RUN gem install jekyll
+
+#Configuration
+RUN useradd -m -G sudo developer \
+&&  mkdir -p /website \
+&&  chown -R developer /website/ /usr/local/
+
+USER developer

@@ -31,4 +31,18 @@ describe 'Dockerfile.devrunner' do
         it { should be_installed.by('gem') }
     end
   end
+
+  describe 'Configuration' do
+    describe user('developer') do
+      it { should exist }
+      it { should belong_to_group 'sudo' }
+      it { should have_home_directory '/home/developer' }
+    end
+    describe file('/website/') do
+      it { should be_owned_by 'developer' }
+    end
+    describe file('/usr/local') do
+      it { should be_owned_by 'developer' }
+    end
+  end
 end
