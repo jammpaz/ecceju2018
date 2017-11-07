@@ -1,0 +1,9 @@
+FROM centos:6.6
+
+# Dependencies
+RUN yum -y update \
+&&  yum -y install httpd \
+&&  useradd -m website
+
+# Configuration
+CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
