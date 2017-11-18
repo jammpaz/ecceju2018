@@ -1,9 +1,4 @@
-FROM centos:6.6
+FROM nginx:1.13.6-alpine
 
-# Dependencies
-RUN yum -y update \
-&&  yum -y install httpd \
-&&  useradd -m website
-
-# Configuration
-CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
+# Website content
+COPY _site /usr/share/nginx/html
