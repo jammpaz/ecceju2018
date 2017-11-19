@@ -6,40 +6,56 @@ require 'json'
 
 describe 'Dockerfile.website' do
   before(:all) do
-    @image = Docker::Image.build_from_dir('.', {'dockerfile' => 'Dockerfile.website'}) do |v|
-      if ( log = JSON.parse(v) ) && log.has_key?("stream")
+    image = Docker::Image.build_from_dir('.', {'dockerfile' => 'Dockerfile.website'}) do |v|
+      if ( log = JSON.parse(v)  ) && log.has_key?("stream")
         $stdout.puts log['stream']
       end
     end
-    @image.tag('repo' => 'jammpaz/website', 'tag' => '0.0.1')
+    image.tag('repo' => 'jammpaz/website', 'tag' => '0.0.1')
+
+    @container = Docker::Container.create(
+      'name' => 'jammpaz_website_test',
+      'Image' => 'jammpaz/website:0.0.1',
+      'Env' => [ 'PORT=8080' ]
+    )
     set :backend, :docker
-    set :docker_image, @image.id
+    set :docker_container, @container.id
+    @container.start
+  end
+
+  after(:all) do
+    @container.stop
+    @container.delete
   end
 
   describe 'Configuration' do
-    describe port(80) do
+    describe command('echo $PORT') do
+      its(:stdout) { should match /8080/ }
+    end
+
+    describe port(8080) do
       it { should be_listening }
     end
   end
 
   describe 'Website content' do
-    describe file('/usr/share/nginx/html/index.html') do
+    describe file('/usr/local/apache2/htdocs/index.html') do
         it { should exist }
     end
 
-    describe file('/usr/share/nginx/html/feed.xml') do
+    describe file('/usr/local/apache2/htdocs/feed.xml') do
         it { should exist }
     end
 
-    describe file('/usr/share/nginx/html/404.html') do
+    describe file('/usr/local/apache2/htdocs/404.html') do
         it { should exist }
     end
 
-    describe file('/usr/share/nginx/html/about') do
+    describe file('/usr/local/apache2/htdocs/about') do
       it { should be_directory }
     end
 
-    describe file('/usr/share/nginx/html/assets') do
+    describe file('/usr/local/apache2/htdocs/assets') do
       it { should be_directory }
     end
   end
