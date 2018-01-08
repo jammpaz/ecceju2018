@@ -6,16 +6,16 @@ require 'json'
 
 describe 'Dockerfile.website' do
   before(:all) do
-    image = Docker::Image.build_from_dir('.', {'dockerfile' => 'Dockerfile.website'}) do |v|
+    image = Docker::Image.build_from_dir('./infra/', {'dockerfile' => 'Dockerfile.website'}) do |v|
       if ( log = JSON.parse(v)  ) && log.has_key?("stream")
         $stdout.puts log['stream']
       end
     end
-    image.tag('repo' => 'jammpaz/website', 'tag' => '0.0.1')
+    image.tag('repo' => 'jammpaz/website', 'tag' => 'test')
 
     @container = Docker::Container.create(
       'name' => 'jammpaz_website_test',
-      'Image' => 'jammpaz/website:0.0.1',
+      'Image' => 'jammpaz/website:test',
       'Env' => [ 'PORT=8080' ]
     )
     set :backend, :docker
@@ -56,6 +56,14 @@ describe 'Dockerfile.website' do
     end
 
     describe file('/usr/local/apache2/htdocs/assets') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/fonts') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/js') do
       it { should be_directory }
     end
   end
