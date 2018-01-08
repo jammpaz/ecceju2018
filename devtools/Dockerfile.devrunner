@@ -1,7 +1,8 @@
 FROM ruby:2.4.2-jessie
 
 #Dependencies
-RUN gem install jekyll
+RUN gem install jekyll \
+&&  gem install html-proofer
 
 #Configuration
 RUN useradd -m -G sudo developer \

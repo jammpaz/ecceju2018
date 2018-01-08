@@ -6,12 +6,12 @@ require 'json'
 
 describe 'Dockerfile.devrunner' do
   before(:all) do
-    @image = Docker::Image.build_from_dir('.', {'dockerfile' => 'Dockerfile.devrunner'}) do |v|
+    @image = Docker::Image.build_from_dir('./devtools', {'dockerfile' => 'Dockerfile.devrunner'}) do |v|
       if ( log = JSON.parse(v) ) && log.has_key?("stream")
         $stdout.puts log['stream']
       end
     end
-    @image.tag('repo' => 'jammpaz/devrunner', 'tag' => '0.0.1')
+    @image.tag('repo' => 'jammpaz/devrunner', 'tag' => 'test')
     set :backend, :docker
     set :os, family: :debian
     set :docker_image, @image.id
@@ -24,10 +24,16 @@ describe 'Dockerfile.devrunner' do
         expect(response.stdout).to match '2.4.2'
       end
     end
+
     describe package('jekyll') do
         it { should be_installed.by('gem') }
     end
+
     describe package('bundler') do
+        it { should be_installed.by('gem') }
+    end
+
+    describe package('html-proofer') do
         it { should be_installed.by('gem') }
     end
   end
