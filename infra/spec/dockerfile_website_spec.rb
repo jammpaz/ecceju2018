@@ -1,12 +1,10 @@
-# spec/dockerfile_app_spec.rb
-
 require 'serverspec'
 require 'docker-api'
 require 'json'
 
 describe 'Dockerfile.website' do
   before(:all) do
-    image = Docker::Image.build_from_dir('./infra/', {'dockerfile' => 'Dockerfile.website'}) do |v|
+    image = Docker::Image.build_from_dir('.', {'dockerfile' => 'Dockerfile.website'}) do |v|
       if ( log = JSON.parse(v)  ) && log.has_key?("stream")
         $stdout.puts log['stream']
       end
