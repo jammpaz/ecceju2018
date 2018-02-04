@@ -9,10 +9,9 @@ services:
 install: make
 
 before_script:
-  - make install_dependencies
+  - make install_dependencies userid=0
 
 script:
   - make test_website_script userid=0
-  - make test_website_htmlproofer
   - make test_and_build_docker_website
   - make upload_docker_website env=qa
