@@ -2,11 +2,9 @@ include infra/Makefile
 
 override JEKYLL_GEMS = jekyll_gems:/usr/local/bundle
 override TASKRUNNER_IMAGE = faustoc/jekyllrunner:0.0.1
-userid := 1000
-.DEFAULT_GOAL := default
 
-default:
-	@ echo "Default target ..."
+userid := 1000
+.DEFAULT_GOAL := install_dependencies
 
 new_website:
 	docker run \
@@ -23,6 +21,7 @@ install_dependencies:
 	  --name install_dependencies \
 	  -v $(shell pwd)/website:/website \
 	  -v $(JEKYLL_GEMS) \
+	  -u $(userid) \
 	  -w /website \
 	  $(TASKRUNNER_IMAGE) \
 	  bundle install
