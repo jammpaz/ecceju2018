@@ -19,7 +19,7 @@
           </ul>
 
           <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Inicio</a></li>
+            <li><a href="/about">Inicio</a></li>
                             {% if page_paths %}
                 {% for path in page_paths %}
                     {% assign my_page = site.pages | where: "path", path | first %}
@@ -30,6 +30,6 @@
             {% endif %}
           </ul>
 
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="/about" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
 </nav>
