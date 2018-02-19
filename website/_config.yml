@@ -16,8 +16,8 @@ encoding: UTF-8
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: JAMMPAZ
-email: info@jammpaz.com
+title: Jóvenes Adoradores Misioneros Mensajeros de la Paz
+email: info@jammpaz.org
 description: >- # this means to ignore newlines until "baseurl:"
   Jammpaz website. Jammpaz es un minsterio de jóvenes perteneciente
   a la Renovación Católica Carismática de Quito.
