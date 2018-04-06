@@ -7,12 +7,12 @@ userid := 1000
 .DEFAULT_GOAL := default
 
 default:
-	@ echo "Jammpaz website maker!"
+	@ echo "ECCEJU website maker!"
 
 new_website:
 	docker run \
 	  --rm \
-	  --name new_website \
+	  --name new_website_ecceju \
 	  -v $(shell pwd)/website:/website \
 	  -w /website \
 	  $(TASKRUNNER_IMAGE) \
@@ -32,7 +32,7 @@ install_dependencies:
 run_website: install_dependencies
 	docker run \
 	  --rm \
-	  --name run_website \
+	  --name run_website_ecceju \
 	  -v $(shell pwd)/website:/website \
 	  -v $(JEKYLL_GEMS) \
 	  -w /website \

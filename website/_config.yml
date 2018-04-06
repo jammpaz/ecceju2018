@@ -16,15 +16,16 @@ encoding: UTF-8
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Jóvenes Adoradores Misioneros Mensajeros de la Paz
-email: info@jammpaz.org
+title: Encuentro Carismático Católico Ecuatoriano Juvenil 2018
+email: info@rccuio.org
+home: Inicio
 description: >- # this means to ignore newlines until "baseurl:"
-  Jammpaz website. Jammpaz es un minsterio de jóvenes perteneciente
-  a la Renovación Católica Carismática de Quito.
+  XXXII Encuentro Carismático Católico Ecuatoriano Juvenil Quito
+  2018
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jammpaz
-github_username:  jammpaz
+facebook_username: eccejuquito2018
+instagram_username: eccejuquito
 
 # Build settings
 markdown: kramdown
