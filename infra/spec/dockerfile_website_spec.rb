@@ -9,11 +9,11 @@ describe 'Dockerfile.website' do
         $stdout.puts log['stream']
       end
     end
-    image.tag('repo' => 'jammpaz/website', 'tag' => 'test')
+    image.tag('repo' => 'ecceju/website', 'tag' => 'test')
 
     @container = Docker::Container.create(
-      'name' => 'jammpaz_website_test',
-      'Image' => 'jammpaz/website:test',
+      'name' => 'ecceju_website_test',
+      'Image' => 'ecceju/website:test',
       'Env' => [ 'PORT=8080' ]
     )
     set :backend, :docker
@@ -49,7 +49,27 @@ describe 'Dockerfile.website' do
         it { should exist }
     end
 
-    describe file('/usr/local/apache2/htdocs/about') do
+    describe file('/usr/local/apache2/htdocs/acerca-de') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/inscripciones') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/ministerios') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/musica') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/noticias') do
+      it { should be_directory }
+    end
+
+    describe file('/usr/local/apache2/htdocs/programacion') do
       it { should be_directory }
     end
 

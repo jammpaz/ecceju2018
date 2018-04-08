@@ -12,8 +12,16 @@ test_and_build_docker_website: arrange_test_docker_website
 	  faustoc/dockertester:0.0.1 \
 	  rspec spec/dockerfile_website_spec.rb
 
-upload_docker_website:
-	docker tag jammpaz/website:test registry.heroku.com/jammpaz-website-$(value env)/web
-	@docker login --username=_ --password=$(TOKEN) registry.heroku.com
-	docker push registry.heroku.com/jammpaz-website-$(value env)/web
+define upload_website_forward_env
+	docker tag ecceju/website:test registry.heroku.com/ecceju-website-$(1)/web
+	@docker login --username=_ --password=$(2) registry.heroku.com
+	docker push registry.heroku.com/ecceju-website-$(1)/web
+endef
 
+upload_docker_website_qa:
+	$(call upload_website_forward_env,qa,$(TOKEN))
+
+upload_docker_website_prod:
+	$(if $(filter no, $(BUILD_DEBUG)), \
+	  $(call upload_website_forward_env,prod,$(TOKEN)), \
+	  @echo "INFO: This build will not be deployed on production environment")
