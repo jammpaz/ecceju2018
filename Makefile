@@ -68,4 +68,4 @@ encrypt_env_variable:
 	  -v $(shell pwd):/website \
 	  -w /website \
 	  $(TASKRUNNER_IMAGE) \
-	  sh -c "travis login --github-token $(github_token) && travis encrypt $(var)="$(val)" --org -r jammpaz/website"
+	  sh -c "travis login --github-token $(github_token) && travis encrypt $(var)="$(val)" --org -r jammpaz/ecceju2018"
