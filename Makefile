@@ -60,12 +60,3 @@ test_website_htmlproofer:
 	  -w /website \
 	  $(TASKRUNNER_IMAGE) \
 	  sh -c "htmlproofer ./_site --disable-external --trace"
-
-encrypt_env_variable:
-	@docker run \
-	  --rm \
-	  --name encrypt_env_variable \
-	  -v $(shell pwd):/website \
-	  -w /website \
-	  $(TASKRUNNER_IMAGE) \
-	  sh -c "travis login --github-token $(github_token) && travis encrypt $(var)="$(val)" --org -r jammpaz/ecceju2018"
