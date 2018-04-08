@@ -27,7 +27,7 @@
           </ul>
 
           <ul id="nav-mobile" class="side-nav">
-            <li><a href="/about">{{ site.home }}</a></li>
+            <li><a href="{{ "/" | relative_url }}">{{ site.home }}</a></li>
                             {% if page_paths %}
                 {% for path in page_paths %}
                     {% assign my_page = site.pages | where: "path", path | first %}
@@ -38,6 +38,6 @@
             {% endif %}
           </ul>
 
-      <a href="/about" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="/acerca-de" data-activates="nav-mobile" class="button-collapse"><i class="material-icons icon-red">menu</i></a>
     </div>
 </nav>

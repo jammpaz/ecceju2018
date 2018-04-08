@@ -9,7 +9,7 @@ layout: default
         <h2 class="header center white-text">{{ site.title }}</h2>
         <br><br>
         <div class="row center">
-          <a href="#" class="btn-large waves-effect waves-light red">INSCRÍBETE</a>
+          <a href="/inscripciones" class="btn-large waves-effect waves-light red">Inscripciones</a>
         </div>
         <br><br>
       </div>
@@ -26,58 +26,72 @@ layout: default
           <div class="card">
             <div class="card-image">
               <img src="{{ "/assets/img/bigger_logo.png" }}">
+              <span class="card-title red-text text-darken-2">Itinerario</span>
             </div>
             <div class="card-content">
               <p>Ahora puedes acceder a la programación del evento, como por ejemplo las charlas y sus predicadores,
               horarios de la Santa Misa, etc.</p>
             </div>
             <div class="card-action">
-              <a href="#">Ver itinerario</a>
+              <a href="/programacion">Ver itinerario</a>
             </div>
           </div>
         </div>
 
         <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center indigo-text"><i class="material-icons">music_note</i></h2>
-            <h5 class="center">Música y Danza</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          <div class="card">
+            <div class="card-image">
+              <img src="{{ "/assets/img/danza_1.jpg" }}">
+              <span class="card-title">Ministerios</span>
+            </div>
+            <div class="card-content">
+              <p>Aqui podrás encontrar información sobre los diferentes ministerios participantes, tales como
+              Ministerio de Danza, Intercesión, Música.</p>
+            </div>
+            <div class="card-action">
+              <a href="/ministerios">Ver más</a>
+            </div>
           </div>
         </div>
 
         <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center indigo-text"><i class="material-icons">accessibility</i></h2>
-            <h5 class="center">Adoración</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          <div class="card">
+            <div class="card-image">
+              <img src="{{ "/assets/img/music_1.jpg" }}">
+              <span class="card-title">Música</span>
+            </div>
+            <div class="card-content">
+              <p>Aqui podrás información sobre las canciones del ECCEJU XXXII Quito 2018,
+              letras de las canciones, tablaturas, acordes, así también como descargas, videos y mucho más.</p>
+            </div>
+            <div class="card-action">
+              <a href="/musica">Ver más</a>
+            </div>
           </div>
         </div>
+
       </div>
 
     </div>
 
     </div>
     <div style="background: #ddd">
-    <div class="container last-post">
-    <section>
-        <h5>Latest Post</h5>
-        <ul class="collection">
-        {% for post in site.posts %}
-        <li class="collection-item avatar">
-          {% assign date_format = site.minima.date_format | default: "%m/%d" %}
-          <div class="date-post">{{ post.date | date: date_format }}</div>
-          <span class="title"><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
-          <p>
-             {{ post.content | truncatewords: 10 }}
-          </p>
-          <a href="{{ post.url | relative_url }}" class="secondary-content"><i class="material-icons">navigate_next</i></a>
-        </li>
-        {% endfor %}
-        </ul>
-    </section>
-    </div>
-  </div>
-
+      <div class="container last-post">
+        <section>
+          <h5>Noticias</h5>
+          <ul class="collection">
+            {% for post in site.posts %}.
+            <li class="collection-item avatar">
+              {% assign date_format = site.minima.date_format | default: "%m/%d" %}
+              <div class="date-post">{{ post.date | date: date_format }}</div>
+              <span class="title"><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></span>
+              <p>
+              {{ post.content | truncatewords: 10 }}
+              </p>
+              <a href="{{ post.url | relative_url }}" class="secondary-content"><i class="material-icons">navigate_next</i></a>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+      </div>
   </div>
