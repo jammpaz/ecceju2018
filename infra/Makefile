@@ -1,3 +1,5 @@
+BUILD_DEBUG ?= yes
+
 arrange_test_docker_website:
 	rm -rf $(shell pwd)/infra/_site
 	cp -R $(shell pwd)/website/_site $(shell pwd)/infra/_site
