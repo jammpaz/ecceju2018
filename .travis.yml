@@ -16,5 +16,5 @@ script:
   - make test_website_htmlproofer
   - make test_and_build_docker_website
   - make upload_docker_website_qa
-  - make upload_docker_website_prod BUILD_DEBUG=no
+  - make upload_docker_website_prod
 
