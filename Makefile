@@ -7,7 +7,7 @@ userid := 1000
 .DEFAULT_GOAL := default
 
 default:
-	@ echo "ECCEJU website maker!"
+	@echo "ECCEJU website maker!"
 
 new_website:
 	docker run \
@@ -60,3 +60,5 @@ test_website_htmlproofer:
 	  -w /website \
 	  $(TASKRUNNER_IMAGE) \
 	  sh -c "htmlproofer ./_site --disable-external --trace"
+
+test_all: test_website_script test_website_htmlproofer
