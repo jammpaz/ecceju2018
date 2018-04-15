@@ -61,4 +61,4 @@ test_website_htmlproofer:
 	  $(TASKRUNNER_IMAGE) \
 	  sh -c "htmlproofer ./_site --disable-external --trace"
 
-test_all: test_website_script test_website_htmlproofer
+test_all: test_website_script test_website_htmlproofer test_and_build_docker_website

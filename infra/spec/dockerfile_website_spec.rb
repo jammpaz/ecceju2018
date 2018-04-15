@@ -49,7 +49,7 @@ describe 'Dockerfile.website' do
         it { should exist }
     end
 
-    describe file('/usr/local/apache2/htdocs/acerca-de') do
+    describe file('/usr/local/apache2/htdocs/about') do
       it { should be_directory }
     end
 
@@ -62,10 +62,6 @@ describe 'Dockerfile.website' do
     end
 
     describe file('/usr/local/apache2/htdocs/musica') do
-      it { should be_directory }
-    end
-
-    describe file('/usr/local/apache2/htdocs/noticias') do
       it { should be_directory }
     end
 
