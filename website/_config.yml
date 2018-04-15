@@ -47,3 +47,7 @@ plugins:
 exclude:
   - test_html.sh
   - test_script.sh
+
+include: ["_pages"]
+
+permalink: /:title/
