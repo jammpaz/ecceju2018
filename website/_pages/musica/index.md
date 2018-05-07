@@ -8,9 +8,9 @@ permalink: /musica/
 <h2>MINISTERIOS DE MÚSICA</h2>
 
 <h3><i><center>Ministerio Jammpaz  </center></i><br></h3>
-<a href="/musica/Ministerio_Jammpaz"><img src="/assets/img/J1.jpg" alt="Ministerio Jammpaz"></a>
+<a href="/musica/ministerio_jammpaz"><img src="/assets/img/J1.jpg" alt="Ministerio Jammpaz"></a>
 <br>
-<a href="/musica/Ministerio_Jammpaz"><i><h5>Leer mas...</h5></i><br></a>
+<a href="/musica/ministerio_jammpaz"><i><h5>Leer mas...</h5></i><br></a>
   
   
 
@@ -20,7 +20,7 @@ permalink: /musica/
 
 <br>
 
-<a href="/musica/MinisterioFCJ"><img src="/assets/img/FCJ.jpg" alt="ministerio FCJ"></a>
+<a href="/musica/ministerio_fcj"><img src="/assets/img/FCJ.jpg" alt="Ministerio FCJ"></a>
 <br>
 Esta es la página para poner información acerca de música
 

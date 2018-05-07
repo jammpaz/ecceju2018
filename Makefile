@@ -37,6 +37,7 @@ run_website: install_dependencies
 	  -v $(JEKYLL_GEMS) \
 	  -w /website \
 	  --expose 4000 \
+	  -p 4000:4000 \
 	  $(TASKRUNNER_IMAGE) \
 	  bundle exec jekyll serve --host 0.0.0.0
 

@@ -1,14 +1,13 @@
 ---
 layout: page
-
-permalink: /musica/Ministerio_Jammpaz
+permalink: /musica/ministerio_jammpaz/
 ---
 <FONT FACE="roman">
 <center>
 <h3>MINISTERIO DE MÚSICA JAMMPAZ</h3>
 
 <br>
-<a href="/musica/Ministerio_Jammpaz"><img src="/assets/img/J2.jpg" alt="logoJammpaz"></a>
+<a href="/musica/ministerio_jammpaz"><img src="/assets/img/J2.jpg" alt="logoJammpaz"></a>
 <br>
 
 ¿Qué significa JAMMPAZ?  
@@ -21,10 +20,10 @@ El ministerio de Música Jammpaz es parte del Grupo de jovenes Jammpaz.
 <h4><b><i>LETRAS</i></b></h4><br>
 
 Dejame Escuchar<br>
-<a href="/musica/Ministerio_Jammpaz"><img src="/assets/img/letraDejame.JPG" alt="letraDejame"></a>
+<a href="/musica/ministerio_jammpaz"><img src="/assets/img/letraDejame.JPG" alt="letraDejame"></a>
 <br>
 Te Alabare "Salmo 57"<br>
-<a href="/musica/Ministerio_Jammpaz"><img src="/assets/img/letraTealabare.JPG" alt="letraTeAlabare"></a>
+<a href="/musica/ministerio_jammpaz"><img src="/assets/img/letraTealabare.JPG" alt="letraTeAlabare"></a>
 <br>
 <a href="https://mega.nz/#!7c4j2YSY!Cr9CdYloufnKBnc6fgqWYaaot5xRLdhp2FDiZTZO9A0" class="btn-large waves-effect waves-light red">Descargar Letra</a>
 <br><br>
