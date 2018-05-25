@@ -4,4 +4,6 @@ title: Inscripciones
 permalink: /inscripciones/
 ---
 
-Esta es la página para poner información acerca de inscripciones.
+Esta es la página para acceder a la aplicación de inscripciones.
+
+Para acceder a la aplicacion pulse en el siguiente [enlace]({{ site.inscripciones_url }}).
