@@ -15,15 +15,15 @@ test_and_build_docker_website: arrange_test_docker_website
 	  rspec spec/dockerfile_website_spec.rb
 
 define upload_website_forward_env
-	docker tag ecceju/website:test registry.heroku.com/ecceju-website-$(1)/web
+	docker tag ecceju/website:test registry.heroku.com/$(1)/web
 	@docker login --username=_ --password=$(2) registry.heroku.com
-	docker push registry.heroku.com/ecceju-website-$(1)/web
+	docker push registry.heroku.com/$(1)/web
 endef
 
 upload_docker_website_qa:
-	$(call upload_website_forward_env,qa,$(TOKEN))
+	$(call upload_website_forward_env,ecceju-qa,$(TOKEN))
 
 upload_docker_website_prod:
 	$(if $(filter no, $(BUILD_DEBUG)), \
-	  $(call upload_website_forward_env,prod,$(TOKEN)), \
+	  $(call upload_website_forward_env,ecceju,$(TOKEN)), \
 	  @echo "INFO: This build will not be deployed on production environment")
