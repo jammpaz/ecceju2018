@@ -2,6 +2,5 @@ FROM httpd:2.2-alpine
 
 # Configuration
 COPY httpd.conf /usr/local/apache2/conf/
-COPY htaccess /usr/local/apache2/htdocs/.htaccess
 # Website content
 COPY _site/ /usr/local/apache2/htdocs/
