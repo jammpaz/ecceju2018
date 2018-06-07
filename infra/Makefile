@@ -30,7 +30,7 @@ upload_docker_website_prod:
 	  @echo "INFO: This build will not be deployed on production environment")
 
 setup_credentials:
-	@echo $(value NETRC) | base64 --decode > ~/.netrc
+	@echo $(value HEROKU_SECRETS) | base64 --decode > ~/.netrc
 
 clean_credentials:
 	rm ~/.netrc
