@@ -2,6 +2,7 @@ sudo: required
 
 env:
   - secure: "Q0SRtZO70NcdtutOqVxZ44C0L+k0t22Yi4kGiqm7dbdd6YZMUzUYpKV4/Evn6A9sGKLVrvB+KwsnIpzIfB8sYpMXeA1xQYQyMPMtPLHNbzBF6Vw1CqKmxNYhn+jbN8PEr3HHkQGZIVRpHkQ6m0urjio/EZZ5RsshZ4AoinMRfsu6gsNvhxju3SnSflDGJSpPF5zZHwOSXdViwgK6wCaG5F0Mmbj3uj8wHTQamSXQeti2anpkD0R26RZjS6YgxEOKRIl5S1Pmi29UKwxfTA76gJMWFopSbHA9dBVyFVeSzJY4eZxHVXRgxYZryq+EWCsHl3xF3gGzojwPIMLUGqIr8pVkFtvWPFKo97DiXcvNobF28VzYKrGJmod/sp+CdoiLGSHCOFzghta3f524Eli/aVjRsJhpKuDc1MNv68hhbtq3H2BbX2jxPTOR4woXQ/z1yY46Hm7HYWjUHDATOjCBvs6ECgXtUQc9ffCK9AeCTVUZEtNfVkR2R5yErXkkXcw6yYc2jwmc/FdMwktCXtusvm++RET2s5meC6Zume+NerFJxa6mk9j8vW/TpcatOClh+8JV0YD/PQevzABW1h/aUOm8ZeyJjVl3nNfT+3/sfYamgPNzKWgpre3pKTNYCVoOTjaECGeHx7hKG7x+jysoIcUXl7hpbgPbXdtEz1zDXys="
+  - secure: "PwZHYtU9g7XEbCseecmsoJG2srvtJHuKE12adcmP9v/WuwnDSJqrVmqGVcX1uBT6wPbJNNGMykg695A2IlyE/9xYq3Q/0kUhsN41RHtwyZlWfj8tmsz6K880KPfiwbwtC5FISOW0SMwbhyGGAsbLMAIpMhKd3f6fDaO7x+sHKlx7RzczRTtwPq2z57My9quPDzAa2jvav7Pt+497GR1+we8idCRelfJfy6cWWmOuYKOX5FT5OTVAEM+QvuBOGG7WVWRYywJHwPzcS9QKDFzYZsoWaOx0QaVE0Sx9YdWQkdOcq0Koa5mz0Xgj77K3/scX5nMXQwxmiXb01DjU/elDcpv3c2/YbJQz2lkpCV3rRkDCH/7olH3BgHqJtKL4C6YnQd6i/k4hBzjJfgGh/lLlwmdaokPtk/nn22HfbbpfAKJkbFIHx+UCaT4bofYlzNY4G3nfOfrqMd9hE6NTUaxnudzq64d/T96Cg3FpFhBOPPBlF/+u454O+Xd1FeVmZlIGHiK80ei5D0040AqtMbqP2UenfB3ydoha4DAEdVcUpOEHzf5hvtcyChTcOmm06rJoIhcLX9fq0JFOsyU89XtS7P+txjtziKSOSQct5CTH+RHf6nL7d8NOPveGlX6dCqkWFvBQGYQsV+Fme4/ewAcIGwbLX3HM25jTmEZvclTSxpI="
 
 services:
   - docker
@@ -11,6 +12,7 @@ install: make
 before_script:
   - curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
   - make install_dependencies userid=0
+  - make setup_credentials
 
 script:
   - make test_website_script userid=0
@@ -18,4 +20,7 @@ script:
   - make test_and_build_docker_website
   - make upload_docker_website_qa
   - make upload_docker_website_prod BUILD_DEBUG=yes
+
+after_script:
+  - make clean_credentials
 

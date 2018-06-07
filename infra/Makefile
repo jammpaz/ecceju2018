@@ -28,3 +28,11 @@ upload_docker_website_prod:
 	$(if $(filter no, $(BUILD_DEBUG)), \
 	  $(call upload_website_forward_env,ecceju,$(TOKEN)), \
 	  @echo "INFO: This build will not be deployed on production environment")
+
+setup_credentials:
+	echo $HEROKU_SECRETS > ~/.temp
+	base64 -d ~/.temp > ~/.netrc
+	rm ~/.temp
+
+clean_credentials:
+	rm ~/.netrc
