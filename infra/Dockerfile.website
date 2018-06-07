@@ -4,3 +4,8 @@ FROM httpd:2.2-alpine
 COPY httpd.conf /usr/local/apache2/conf/
 # Website content
 COPY _site/ /usr/local/apache2/htdocs/
+
+RUN adduser -D website \
+&&  chown website -R /usr/local/apache2
+
+USER website
