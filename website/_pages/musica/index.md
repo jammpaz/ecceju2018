@@ -3,29 +3,102 @@ layout: page
 title: Música
 permalink: /musica/
 ---
-<FONT FACE="roman">
-<center>
-<h2>MINISTERIOS DE MÚSICA</h2>
 
-<h3><i><center>Ministerio Jammpaz  </center></i><br></h3>
-<a href="/musica/ministerio_jammpaz"><img src="/assets/img/J1.jpg" alt="Ministerio Jammpaz"></a>
-<br>
-<a href="/musica/ministerio_jammpaz"><i><h5>Leer mas...</h5></i><br></a>
-  
-  
+
+<div class="row">
+  <div class="col s12 center">
+    <h2>MINISTERIOS DE MÚSICA</h2>
+  </div>
+</div>
 
 
 
-<h3><i>Ministerio Familias con Jesús</i><br></h3>
+<div class="row">
+  <div class="col s12 center">
+    <h3>Ministerio Jammpaz</h3>
+  </div>
+</div>
 
-<br>
+<div class="container">
+    <div class="row">
+        <div class="col s12 m7 center">
+        <div class="card">
+            <div class="card-image">
+            <img class="materialboxed" src="/assets/img/J2.jpg" alt="misniteriojammpaz">
+            <span class="card-title">
+            </span>
+            </div>
+            <div class="card-content">
+            <p>¿Qué significa JAMMPAZ?<br>
+            El acronimo Jammpaz proviene de:<br>
+            Jovenes Misioneros Mensajeros de la Paz.</p>
+            </div>
+            <div class="card-action">
+            <a href="/musica/ministerio_jammpaz/jammpaz_pagina_1">VER MAS... --></a>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>            
 
-<a href="/musica/ministerio_fcj"><img src="/assets/img/FCJ.jpg" alt="Ministerio FCJ"></a>
-<br>
-Esta es la página para poner información acerca de música
+ 
+
+
+ <div class="row">
+  <div class="col s12 center">
+    <h3>Ministerio de Sangolqui</h3>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row"> 
+    <div class="col s12 m7 center">
+        <div class="card horizontal">
+        <div class="card-image">
+            <img class="materialboxed" img src="/assets/img/ministerio fausto.JPG" alt="ministeriosangolqui">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+            <p>
+            El Ministerio de Alabanza de la Renovación Carismática Católica de Sangolquí se formó hace tres años.
+            </p>
+            </div>
+            <div class="card-action">
+            <a href="/musica/ministerio_sangolqui">VER MAS... --></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
 
 
 
-</center>
-</FONT>
+<div class="row">
+  <div class="col s12 center">
+    <h3>Ministerio FCJ</h3>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row"> 
+    <div class="col s12 m7 center">
+        <div class="card horizontal">
+        <div class="card-image">
+            <img class="materialboxed" img src="/assets/img/FCJ.jpg" alt="familiasconjesus">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+            <p>¿Qué significa FCJ?<br>
+            El acronimo FCJ proviene de:<br>
+            FAMILIAS CON JESÚS.</p>
+            </div>
+            <div class="card-action">
+            <a href="/musica/ministerio_fcj">VER MAS... --></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
 
