@@ -1,26 +1,43 @@
 @charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
+
+$font-family-title: 'Yanone Kaffeesatz';
+$font-family-content: 'Sunflower';
+$default-font-family-content: 'Roboto';
 
 h1, h2, h3, h4, h5, h6 {
     -webkit-font-smoothing: antialiased;
+    font-family: $font-family-title;
+    font-weight: normal;
 }
+
+body {
+  font-family: $font-family-content, $default-font-family-content;
+}
+
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
 	font-size: inherit;
 }
+
 .shadow-demo {
     background-color: #26a69a;
     width: 100px;
     height: 100px;
     margin: 20px auto;
 }
+
 h1.page-title {
     font-weight: 500;
     font-size: 2.3em;
     text-align: center;
     color: #29b6f6;
 }
+
 .col.grid-example {
     border: 1px solid #eee;
     margin: 7px 0;
@@ -31,12 +48,15 @@ h1.page-title {
     color: white;
     padding: 0;
 }
+
 .collection .collection-item.avatar {
     padding-right: 30px;
 }
+
 .last-post {
     padding: 10px 0 15px;
 }
+
 .last-post .collection .collection-item.avatar>.date-post {
     position: absolute;
     width: 54px;
@@ -50,18 +70,22 @@ h1.page-title {
     color: #fff;
     text-align: center;
 }
+
 .txt-center {
     text-align: center;
 }
+
 .post-header h1.post-title {
     color: #29b6f6;
     font-size: 2.8em;
     font-weight: 800;
 }
+
 .post-header time {
     color: #cacaca;
     font-size: 0.9em;
 }
+
 p.rss-subscribe {
     margin: 0;
 }
