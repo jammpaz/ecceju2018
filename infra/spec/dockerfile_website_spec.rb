@@ -53,19 +53,11 @@ describe 'Dockerfile.website' do
       it { should be_directory }
     end
 
-    describe file('/usr/local/apache2/htdocs/inscripciones') do
-      it { should be_directory }
-    end
-
     describe file('/usr/local/apache2/htdocs/ministerios') do
       it { should be_directory }
     end
 
     describe file('/usr/local/apache2/htdocs/musica') do
-      it { should be_directory }
-    end
-
-    describe file('/usr/local/apache2/htdocs/programacion') do
       it { should be_directory }
     end
 
