@@ -7,7 +7,7 @@ category: noticias
 
 Las camisetas para nuestro tan esperado encuentro están disponibles en preventa. 
 
-<center><img alt="Preventa Camisetas" src="/assets/img/camisetas.jpg" /></center>
+<center><img alt="Preventa Camisetas" src="/assets/img/camisetas.jpg" class="responsive-img" /></center>
 
 Existen dos modelos de camisetas: una en estilo blanco con rojo y la otra en negro. La foto anterior muestra como lucen; están geniales verdad?
 

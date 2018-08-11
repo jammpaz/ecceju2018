@@ -2,7 +2,7 @@
   $(function(){
 
     $('.button-collapse').sideNav();
-    $('.carousel').carousel();
+    $('.slider').slider({ height: 550, interval: 8000 });
     $('.parallax').parallax();
     $('.dropdown-button').dropdown();
 
