@@ -20,6 +20,6 @@ Inscribirse con el/la líder local. El líder local debe recaudar todas las insc
 
 ##### Inscripciones Individuales
 
-Si eres de una localidad donde no hay RCC juvenil o eres de otro movimiento debes contactarte con la hermana *Paulina Sandovalin* al *0999837842*, o al correo *ofnacecrcc@hotmail.com*, y ella te inscribirá. En este caso el depósito o transferencia deberás hacerlo a la Cuenta de la Pastoral Juvenil RCC Quito (a la cuenta de Pastoral Quito).
+Si eres de una localidad donde no hay RCC juvenil o eres de otro movimiento debes contactarte con la hermana *Paulina Sandovalin* al *0999837842*, o al correo *ofnacecrcc@hotmail.com*, y ella te inscribirá. En este caso el depósito o transferencia deberás hacerlo a la Cuenta Corriente *2100026357* del *Banco Pichincha* a nombre de la *Renovacion Carismática Católica*
 
-Para mayor información contactarse a _0985345527_.
+Para mayor información contactarse al *0999837842*.
